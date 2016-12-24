@@ -108,8 +108,8 @@ Event onEffectStart(Actor akTarget, Actor akCaster)
 	;RegisterForAnimationEvent(_SelfRef,"FootFront")
 ;	RegisterForAnimationEvent(_SelfRef,"FootBack")
 	RegisterForSingleUpdate(1)
-	_JumpKey = Input.GetMappedKey("Jump")
-	RegisterForControl("Jump")
+	;_JumpKey = Input.GetMappedKey("Jump")
+	;RegisterForControl("Jump")
 	
 	If _FlightSmoothing < 1
 		_FlightSmoothing = 1
@@ -309,11 +309,11 @@ Function UpdateConfig()
 	_FlightTrackingEnable                = (vRDN_cfgFlightTrackingEnable.GetValue() as Int) as Bool
 	_FlightTrackingType                  = (vRDN_cfgFlightTrackingType.GetValue() as Int)
 	
-	UnregisterForAllControls()
+	;UnregisterForAllControls()
 	If !_FlightHoldJumpToClimbEnable
 		_Rising = False
 	Else
-		RegisterForControl("Jump")
+	;	RegisterForControl("Jump")
 	EndIf
 	Debug.Trace("vRDN_FlightMEScript: UpdateConfig completed on Flight script!")
 EndFunction

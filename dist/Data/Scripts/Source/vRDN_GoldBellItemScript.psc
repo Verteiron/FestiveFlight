@@ -48,7 +48,7 @@ Event OnEquipped(Actor akActor)
 				vRDN_EndCombatMSG.Show()
 				Return
 			EndIf
-			Armor Helmet = PlayerREF.GetWornForm(0x00000001) as Armor
+			;Armor Helmet = PlayerREF.GetWornForm(0x00000001) as Armor
 			PlayerREF.UnEquipItemSlot(30)
 			;PlayerREF.UnEquipItemSlot(31)
 			;PlayerREF.UnEquipItemSlot(30)
@@ -133,9 +133,9 @@ Event OnEquipped(Actor akActor)
 			CamPoint3.Delete()
 			FaceLightObj.Delete()
 			Camera.Delete()
-			If Helmet
-				PlayerREF.EquipItemEX(Helmet,0,False,False)
-			EndIf
+			; If Helmet
+			; 	PlayerREF.EquipItemEX(Helmet,0,False,False)
+			; EndIf
 			Wait(1)
 			vRDN_RudolphSummonSpell.Cast(PlayerREF)
 			Wait(2)
